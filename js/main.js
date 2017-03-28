@@ -55,11 +55,9 @@ var agregarTarea = function(){
 			});
 		}
 
-
-
 };
 
-
+		//con esto supuestamente estaría sumando los totales.
 		var suma = 0;
 		var plata = [];
 
