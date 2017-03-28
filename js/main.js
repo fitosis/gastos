@@ -1,3 +1,5 @@
+/*js app gastos*/
+
 // =======variables
 var lista = document.getElementById("lista"),
 	tareaInput = document.getElementById("tareaInput"),
