@@ -56,9 +56,10 @@ var agregarTarea = function(){
 		}
 
 };
-
-		//con esto supuestamente estaría sumando los totales.
-		var suma = 0;
+        
+		//1con esto supuestamente estaría sumando los totales.
+        /*	
+        var suma = 0;
 		var plata = [];
 
 		plata.push(4);
@@ -69,7 +70,7 @@ var agregarTarea = function(){
 				suma += plata[i];
 			});
 		  
-		}
+		}*/
 
 /*for (var i = 0; i <= lista.children.length -1; i++) {
 	lista.children[i].addEventListener("click", function(){
