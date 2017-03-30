@@ -17,16 +17,23 @@ var agregarTarea = function(){
 		contenidoPrecio = document.createTextNode("$" + precio); //rescata el texto del input (q esta en tarea) y lo guarda en la var contenido
 		
 
-		//validación para que tenga contenido el input
-		if (tarea === "") { //Si el input no tiene nada
+		//validación para que tengan contenido los input
+        if(tarea === "" && precio === ""){
+            tareaInput.setAttribute("placeholder", "Agrega un gasto valido"); //este es el id del input y le agrega este texto
+			tareaInput.className = "error"; // y también le agrega esta clase
+            precioInput.setAttribute("placeholder", "Agrega un precio valido"); //este es el id del input y le agrega este texto
+			precioInput.className = "error"; // y también le agrega esta class
+            return false;
+        }else if (tarea === "") {
 			tareaInput.setAttribute("placeholder", "Agrega un gasto valido"); //este es el id del input y le agrega este texto
 			tareaInput.className = "error"; // y también le agrega esta clase
-		}
-		if(precio === "") { //Si el input no tiene nada
+			return false;
+        }else if(precio === "") {
 			precioInput.setAttribute("placeholder", "Agrega un precio valido"); //este es el id del input y le agrega este texto
 			precioInput.className = "error"; // y también le agrega esta class
-		}
-
+            return false;
+        }
+        
 
 		//Agregamos el contenido al enlace
 		enlace1.appendChild(contenidoTarea);
@@ -56,21 +63,27 @@ var agregarTarea = function(){
 		}
 
 };
-        
-		//1con esto supuestamente estaría sumando los totales.
-        /*	
-        var suma = 0;
-		var plata = [];
 
-		plata.push(4);
-		plata.push(6);
+//validación de número
+function validarSiNumero(numero){
+  if (!/^([0-9])*$/.test(numero))
+    alert("El valor " + numero + " no es un número");
+}
 
-		for(var i = 0; i < plata.length; i++) {
-			plata.length.addEventListener("click", function(){
-				suma += plata[i];
-			});
-		  
-		}*/
+//con esto supuestamente estaría sumando los totales.
+/*	
+var suma = 0;
+var plata = [];
+
+plata.push(4);
+plata.push(6);
+
+for(var i = 0; i < plata.length; i++) {
+	plata.length.addEventListener("click", function(){
+		suma += plata[i];
+	});
+  
+}*/
 
 /*for (var i = 0; i <= lista.children.length -1; i++) {
 	lista.children[i].addEventListener("click", function(){
